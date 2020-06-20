@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block content %}
+    {% if sent not in "infoform" %}
+        <h1>Thank you for using our service!</h1>
+        <p>User has the email: {{ session['email']}}</p>
+        <p>User has the password: {{session['password']}}</p>
+    {% else %}
+        <p>User has the first name: {{session['fname']}}</p>
+        <p>User has the last name: {{session['lname']}}</p>
+        <p>User has the address: {{session['address']}}</p>
+        <p>User has the city: {{session['city']}}</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}{% block content %}
+    <div class="container">
+        <h1>Welcome to the website!</h1>
+
+    <form method="POST">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            {{form.hidden_tag()}}
+            {{form.fname.label}} {{form.fname(class_="form-control")}}
+          </div>
+          <div class="form-group col-md-6">
+            {{form.lname.label}} {{form.lname(class_="form-control")}}
+          </div>
+        </div>
+        <div class="form-group">
+          {{form.address.label}} {{form.address(class_="form-control")}}
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            {{form.city.label}} {{form.city(class_="form-control")}}
+          </div>
+        </div>
+        {{form.submit()}}
+      </form>
+    </div>
+{% endblock %}
